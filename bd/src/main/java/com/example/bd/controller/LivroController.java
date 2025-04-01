@@ -9,20 +9,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/livros")
-public class LivroController { // Nome mais descritivo
+public class LivroController { 
 
     @Autowired
     private LivroRepository repository;
 
-    // Endpoint para buscar por autor
-    @GetMapping("/autor/{autor}") // 👈 Define o padrão da URL
+    
+    @GetMapping("/autor/{autor}") 
     public List<Livro> buscarPorAutor(@PathVariable String autor) {
         return repository.findByAutor(autor);
     }
 
-    // Endpoint raiz melhorado
+
     @GetMapping
-    public List<Livro> listarTodos() { // 👈 Retorna todos os livros
+    public List<Livro> listarTodos() { 
         return repository.findAll();
     }
 }
