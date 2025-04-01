@@ -1,0 +1,15 @@
+package com.example.bd;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BdApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BdApplication.class, args);
+
+		System.out.println("rodando tudo certo!");
+	}
+
+}
