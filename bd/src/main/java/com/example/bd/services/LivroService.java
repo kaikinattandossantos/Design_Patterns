@@ -8,20 +8,18 @@ import org.springframework.stereotype.Service;
 import com.example.bd.entity.Livro;
 import com.example.bd.repository.LivroRepository;
 
-@Service // 👈 Anotação essencial para serviços Spring
-public class LivroService { // Remove "implements LivroRepository"
+@Service 
+public class LivroService { 
 
-    @Autowired // 👈 Injeção do repositório
+    @Autowired 
     private LivroRepository livroRepository;
 
-    // Exemplo de método de serviço
     public List<Livro> buscarTodosLivros() {
-        return livroRepository.findAll(); // Usa o repositório
+        return livroRepository.findAll(); 
     }
     
     public Livro salvarLivro(Livro livro) {
         return livroRepository.save(livro);
     }
     
-    // Adicione outros métodos de negócio aqui
 }
